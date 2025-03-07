@@ -4,13 +4,15 @@ project(SFML_Game)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(SFML_Game
-        ResourceHolder.hpp
-        ResourceHolder.inl
-        Main.cpp
-        Entity.cpp
-        ResourceIdentifiers.hpp
-        Aircraft.hpp
-        Aircraft.cpp)
+        Include/ResourceHolder.hpp
+        Include/ResourceHolder.inl
+        src/Main.cpp
+        src/Entity.cpp
+        Include/ResourceIdentifiers.hpp
+        Include/Aircraft.hpp
+        src/Aircraft.cpp
+        Include/SceneNode.hpp
+        src/SceneNode.cpp)
 
 set(SFML_STATIC_LIBRARIES TRUE)
 set(SFML_DIR C:/libs/sfml/lib/cmake/SFML)

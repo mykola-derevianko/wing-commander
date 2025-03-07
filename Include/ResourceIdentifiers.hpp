@@ -12,16 +12,12 @@ namespace sf
 
 namespace Textures
 {
-	enum ID
-	{
-		Entities,
-		Jungle,
-		TitleScreen,
-		Buttons,
-		Explosion,
-		Particle,
-		FinishLine,
-	};
+    enum ID
+    {
+        Eagle,
+        Raptor,
+        Desert,
+    };
 }
 
 namespace Shaders
@@ -70,9 +66,9 @@ namespace Music
 template <typename Resource, typename Identifier>
 class ResourceHolder;
 
-typedef ResourceHolder<sf::Texture, Textures::ID>			TextureHolder;
-typedef ResourceHolder<sf::Font, Fonts::ID>					FontHolder;
-typedef ResourceHolder<sf::Shader, Shaders::ID>				ShaderHolder;
-typedef ResourceHolder<sf::SoundBuffer, SoundEffect::ID>	SoundBufferHolder;
+typedef ResourceHolder<sf::Texture, Textures::ID> TextureHolder;
+typedef ResourceHolder<sf::Font, Fonts::ID>	FontHolder;
+typedef ResourceHolder<sf::Shader, Shaders::ID> ShaderHolder;
+typedef ResourceHolder<sf::SoundBuffer, SoundEffect::ID> SoundBufferHolder;
 
 #endif
