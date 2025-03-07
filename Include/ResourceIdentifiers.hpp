@@ -1,8 +1,7 @@
-#ifndef BOOK_RESOURCEIDENTIFIERS_HPP
-#define BOOK_RESOURCEIDENTIFIERS_HPP
+#ifndef SFML_GAME_RESOURCEIDENTIFIERS_HPP
+#define SFML_GAME_RESOURCEIDENTIFIERS_HPP
 
 
-// Forward declaration of SFML classes
 namespace sf
 {
 	class Texture;
@@ -68,7 +67,6 @@ namespace Music
 }
 
 
-// Forward declaration and a few type definitions
 template <typename Resource, typename Identifier>
 class ResourceHolder;
 
@@ -77,4 +75,4 @@ typedef ResourceHolder<sf::Font, Fonts::ID>					FontHolder;
 typedef ResourceHolder<sf::Shader, Shaders::ID>				ShaderHolder;
 typedef ResourceHolder<sf::SoundBuffer, SoundEffect::ID>	SoundBufferHolder;
 
-#endif // BOOK_RESOURCEIDENTIFIERS_HPP
+#endif

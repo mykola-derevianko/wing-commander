@@ -20,4 +20,4 @@ private:
     Type mType;
 };
 
-#endif //SFML_GAME_AIRCRAFT_HPP
+#endif

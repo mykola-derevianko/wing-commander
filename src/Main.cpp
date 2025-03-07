@@ -1,4 +1,4 @@
-#include "ResourceHolder.hpp"
+#include "Include/ResourceHolder.hpp"
 
 #include <SFML/Graphics.hpp>
 
@@ -20,7 +20,7 @@ int main()
 	sf::RenderWindow window(sf::VideoMode(640, 480), "Resources");
 	window.setFramerateLimit(20);
 
-	// Try to load resources
+
 	ResourceHolder<sf::Texture, Textures::ID> textures;
 	try
 	{
@@ -33,7 +33,6 @@ int main()
 		return 1;
 	}
 
-	// Access resources
 	sf::Sprite landscape(textures.get(Textures::Landscape));
 	sf::Sprite airplane(textures.get(Textures::Airplane));
 	airplane.setPosition(200.f, 200.f);

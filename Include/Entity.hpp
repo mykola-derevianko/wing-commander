@@ -17,4 +17,4 @@ private:
 
 
 
-#endif //SFML_GAME_ENTITY_HPP
+#endif
