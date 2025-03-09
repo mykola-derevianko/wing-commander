@@ -12,7 +12,9 @@ add_executable(SFML_Game
         Include/Aircraft.hpp
         src/Aircraft.cpp
         Include/SceneNode.hpp
-        src/SceneNode.cpp)
+        src/SceneNode.cpp
+        Include/SpriteNode.hpp
+        src/SpriteNode.cpp)
 
 set(SFML_STATIC_LIBRARIES TRUE)
 set(SFML_DIR C:/libs/sfml/lib/cmake/SFML)
