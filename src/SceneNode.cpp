@@ -1,6 +1,8 @@
 #include <algorithm>
 #include <cassert>
+#include <iostream>
 #include "../Include/SceneNode.hpp"
+#include "../Include/Category.hpp"
 
 SceneNode::SceneNode() : mChildren(), mParent(nullptr){}
 
@@ -62,5 +64,16 @@ sf::Transform SceneNode::getWorldTransform() const {
         transform *= node->getTransform();
 
     return transform;
+}
+
+unsigned int SceneNode::getCategory() const {
+    return Category::Scene;
+}
+
+void SceneNode::onCommand(const Command &command, sf::Time dt) {
+    if(command.category & getCategory())
+        command.action(*this,dt);
+    for (Ptr& child : mChildren)
+        child->onCommand(command,dt);
 }
 

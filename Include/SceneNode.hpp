@@ -5,6 +5,8 @@
 #include <memory>
 #include <vector>
 #include "SFML/Graphics.hpp"
+#include "Command.hpp"
+
 class SceneNode : public sf::Transformable, public sf::Drawable, private sf::NonCopyable
 {
 public:
@@ -17,6 +19,8 @@ public:
     void update(sf::Time dt);
     sf::Vector2f getWorldPosition() const;
     sf::Transform getWorldTransform() const;
+    virtual unsigned int getCategory() const;
+    void onCommand(const Command& command, sf::Time dt);
 
 private:
     std::vector<Ptr> mChildren;

@@ -14,7 +14,20 @@ add_executable(SFML_Game
         Include/SceneNode.hpp
         src/SceneNode.cpp
         Include/SpriteNode.hpp
-        src/SpriteNode.cpp)
+        src/SpriteNode.cpp
+        Include/World.hpp
+        src/World.cpp
+        Include/Game.hpp
+        src/Game.cpp
+        Include/StringHelpers.hpp
+        Include/StringHelpers.inl
+        Include/Command.hpp
+        src/Command.cpp
+        Include/Category.hpp
+        Include/CommandQueue.hpp
+        src/CommandQueue.cpp
+        Include/Player.hpp
+        src/Player.cpp)
 
 set(SFML_STATIC_LIBRARIES TRUE)
 set(SFML_DIR C:/libs/sfml/lib/cmake/SFML)
