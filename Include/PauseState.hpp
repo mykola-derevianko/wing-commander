@@ -1,0 +1,10 @@
+#ifndef SFML_GAME_PAUSESTATE_HPP
+#define SFML_GAME_PAUSESTATE_HPP
+
+
+class PauseState {
+
+};
+
+
+#endif //SFML_GAME_PAUSESTATE_HPP
