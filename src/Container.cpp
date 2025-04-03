@@ -1,4 +1,4 @@
-#include "Container.hpp"
+#include "../Include/Container.hpp"
 
 #include <SFML/Window/Event.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
@@ -44,8 +44,8 @@ namespace GUI{
     void Container::draw(sf::RenderTarget& target, sf::RenderStates states) const{
         states.transform *= getTransform();
 
-        FOREACH(const Component::Ptr& child, mChildren)
-        target.draw(*child, states);
+        for(const Component::Ptr& child : mChildren)
+            target.draw(*child, states);
     }
 
     bool Container::hasSelection() const{

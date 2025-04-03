@@ -22,12 +22,26 @@ private:
     void buildScene();
     void correctPlayerPosition();
     void correctPlayerVelocity();
+    void spawnEnemies();
+    void addEnemies();
+    void addEnemy(Aircraft::Type type, float relX, float relY);
+    sf::FloatRect getBattlefieldBounds() const;
+    sf::FloatRect getViewBounds() const;
 
+private:
     enum Layer{
         Background,
         Air,
         LayerCount
     };
+    struct SpawnPoint{
+        SpawnPoint(Aircraft::Type type, float x, float y);
+        Aircraft::Type type;
+        float x;
+        float y;
+    };
+
+
 private:
     sf::RenderWindow& mWindow;
     sf::View mWorldView;
@@ -42,6 +56,11 @@ private:
     Aircraft* mPlayerAircraft;
 
     CommandQueue mCommandQueue;
+
+    std::vector<SpawnPoint> mEnemySpawnPoints;
+    FontHolder& mFonts;
+
+
 };
 
 

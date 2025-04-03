@@ -1,8 +1,8 @@
-#include "SettingsState.hpp"
-#include "Utility.hpp"
-#include "ResourceIdentifiers.hpp"
-#include "Player.hpp"
-#include "Label.hpp"
+#include "../Include/SettingsState.hpp"
+#include "../Include/Utility.hpp"
+#include "../Include/ResourceIdentifiers.hpp"
+#include "../Include/Player.hpp"
+#include "../Include/Label.hpp"
 SettingsState::SettingsState(StateStack& stack, Context context) : State(stack, context),
     mGUIContainer(){
     mBackgroundSprite.setTexture(context.textures->get(Textures::TitleScreen));

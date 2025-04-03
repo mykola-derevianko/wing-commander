@@ -1,6 +1,6 @@
-#include "Label.hpp"
+#include "../Include/Label.hpp"
 #include "Graphics/RenderWindow.hpp"
-#include "ResourceHolder.hpp"
+#include "../Include/ResourceHolder.hpp"
 namespace GUI{
 
     Label::Label(const std::string& text, const FontHolder& fonts)

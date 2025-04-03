@@ -6,6 +6,18 @@
 class Entity : public SceneNode
 {
 public:
+    explicit Entity(int points);
+    void repair(int points);
+    void damage(int points);
+    void destroy();
+
+    int getHitpoints() const;
+    int isDestroyed() const;
+
+private:
+    int mHitpoints;
+
+public:
     void setVelocity(sf::Vector2f velocity);
     void setVelocity(float vx, float vy);
     sf::Vector2f getVelocity() const;

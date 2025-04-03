@@ -1,6 +1,6 @@
 
-#include "TextNode.hpp"
-#include "Utility.hpp"
+#include "../Include/TextNode.hpp"
+#include "../Include/Utility.hpp"
 
 TextNode::TextNode(const FontHolder &fonts, const std::string &text) {
     mText.setFont(fonts.get(Fonts::Main));

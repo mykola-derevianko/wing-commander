@@ -4,30 +4,43 @@
 
 #include "Entity.hpp"
 #include "ResourceIdentifiers.hpp"
+#include "DataTables.hpp"
+#include "TextNode.hpp"
+
+namespace
+{
+    const std::vector<AircraftData> Table = initializeAircraftData();
+}
 
 class Aircraft : public Entity{
 public:
-    enum Type
-    {
+    enum Type{
         Eagle,
         Raptor,
+        Avenger,
+        TypeCount
     };
-    enum Textures{
-
-    };
-
 
 public:
-    explicit Aircraft(Type type, const TextureHolder& textures);
-    virtual void drawCurrent(sf::RenderTarget& target,
-                             sf::RenderStates states) const;
+    Aircraft(Type type, const TextureHolder& textures, const FontHolder& fonts);
+    virtual void drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
     unsigned int getCategory() const override;
+    float getMaxSpeed() const;
+
+
+private:
+    void updateTexts();
+    void updateMovementPattern(sf::Time dt);
 
 
 
 private:
     Type mType;
     sf::Sprite mSprite;
+    TextNode* mHealthDisplay;
+    float mTravelledDistance;
+    std::size_t	mDirectionIndex;
+
 };
 
 #endif

@@ -17,6 +17,11 @@ namespace Textures
         Eagle,
         Raptor,
         Desert,
+        Avenger,
+        TitleScreen,
+        ButtonNormal,
+        ButtonSelected,
+        ButtonPressed
     };
 }
 

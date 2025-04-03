@@ -1,5 +1,5 @@
 #include "../Include/Game.hpp"
-#include "../Include/StringHelpers.hpp"
+#include "../Include/Utility.hpp"
 
 #include <SFML/Window/Event.hpp>
 

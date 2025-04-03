@@ -1,5 +1,5 @@
-#ifndef SFML_GAME_STRINGHELPERS_HPP
-#define SFML_GAME_STRINGHELPERS_HPP
+#ifndef SFML_GAME_UTILITY_HPP
+#define SFML_GAME_UTILITY_HPP
 
 
 #include <sstream>
@@ -7,6 +7,9 @@
 template <typename T>
 std::string toString(const T& value);
 
-#include "StringHelpers.inl"
+void centerOrigin(sf::Sprite& sprite);
+void centerOrigin(sf::Text& text);
 
-#endif //SFML_GAME_STRINGHELPERS_HPP
+#include "Utility.inl"
+
+#endif //SFML_GAME_UTILITY_HPP
