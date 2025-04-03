@@ -1,7 +1,10 @@
 #include "../Include/GameState.hpp"
-GameState::GameState(StateStack& stack, Context context): State(stack, context)
-    , mWorld(*context.window)
-    , mPlayer(*context.player){}
+GameState::GameState(StateStack& stack, Context context)
+        : State(stack, context)
+        , mWorld(*context.window, *context.fonts)
+        , mPlayer(*context.player){
+    mPlayer.setMissionStatus(Player::MissionRunning);
+}
 
 void GameState::draw(){
     mWorld.draw();

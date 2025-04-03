@@ -1,5 +1,5 @@
 #include "../Include/SettingsState.hpp"
-#include "../Include/Utility.hpp"
+#include "../Include/Utility.inl"
 #include "../Include/ResourceIdentifiers.hpp"
 #include "../Include/Player.hpp"
 #include "../Include/Label.hpp"

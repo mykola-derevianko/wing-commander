@@ -11,7 +11,7 @@
 
 class World : private sf::NonCopyable{
 public:
-    explicit World(sf::RenderWindow& window);
+    explicit World(sf::RenderWindow& window, FontHolder& fonts);
     void update(sf::Time dt);
     void draw();
 
@@ -27,6 +27,12 @@ private:
     void addEnemy(Aircraft::Type type, float relX, float relY);
     sf::FloatRect getBattlefieldBounds() const;
     sf::FloatRect getViewBounds() const;
+    void adaptPlayerPosition();
+    void adaptPlayerVelocity();
+    void handleCollisions();
+
+    void destroyEntitiesOutsideView();
+    void guideMissiles();
 
 private:
     enum Layer{
@@ -59,6 +65,7 @@ private:
 
     std::vector<SpawnPoint> mEnemySpawnPoints;
     FontHolder& mFonts;
+    std::vector<Aircraft*> mActiveEnemies;
 
 
 };

@@ -8,7 +8,7 @@ const sf::Time Game::TimePerFrame = sf::seconds(1.f/60.f);
 
 Game::Game()
         : mWindow(sf::VideoMode(640, 480), "Wing Commander", sf::Style::Close)
-        , mWorld(mWindow)
+        , mWorld(*context.window, *context.fonts)
         , mFont()
         , mStatisticsText()
         , mStatisticsUpdateTime()

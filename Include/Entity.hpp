@@ -2,6 +2,7 @@
 #define SFML_GAME_ENTITY_HPP
 #include <SFML/Graphics.hpp>
 #include "SceneNode.hpp"
+#include "CommandQueue.hpp"
 
 class Entity : public SceneNode
 {
@@ -12,7 +13,7 @@ public:
     void destroy();
 
     int getHitpoints() const;
-    int isDestroyed() const;
+    bool isDestroyed() const override;
 
 private:
     int mHitpoints;
@@ -27,7 +28,9 @@ public:
 
 private:
     sf::Vector2f mVelocity;
-    void updateCurrent(sf::Time dt) override;
+
+protected:
+    virtual void updateCurrent(sf::Time dt, CommandQueue& commands);
 };
 
 

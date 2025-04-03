@@ -13,7 +13,7 @@ sf::Vector2f Entity::getVelocity() const {
     return mVelocity;
 }
 
-void Entity::updateCurrent(sf::Time dt) {
+void Entity::updateCurrent(sf::Time dt, CommandQueue& commands) {
     move(mVelocity*dt.asSeconds());
 }
 
@@ -40,15 +40,14 @@ void Entity::damage(int points) {
 
 void Entity::destroy() {
     mHitpoints = 0;
-
 }
 
 int Entity::getHitpoints() const {
     return mHitpoints;
 }
 
-int Entity::isDestroyed() const {
+bool Entity::isDestroyed() const {
     return mHitpoints <= 0;
 }
 
-
+Entity::Entity(int hitpoints): mVelocity(), mHitpoints(hitpoints){}

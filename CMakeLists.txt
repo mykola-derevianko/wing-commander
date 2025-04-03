@@ -17,8 +17,6 @@ add_executable(SFML_Game
         src/SpriteNode.cpp
         Include/World.hpp
         src/World.cpp
-        Include/Game.hpp
-        src/Game.cpp
         Include/Utility.hpp
         Include/Utility.inl
         Include/Command.hpp
@@ -52,7 +50,11 @@ add_executable(SFML_Game
         Include/DataTables.hpp
         src/DataTables.cpp
         Include/TextNode.hpp
-        src/TextNode.cpp)
+        src/TextNode.cpp
+        Include/Projectile.hpp
+        src/Projectile.cpp
+        Include/Pickup.hpp
+        src/Pickup.cpp)
 
 set(SFML_STATIC_LIBRARIES TRUE)
 set(SFML_DIR C:/libs/sfml/lib/cmake/SFML)

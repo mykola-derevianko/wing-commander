@@ -1,8 +1,8 @@
 
-#include "DataTables.hpp"
-#include "Pickup.hpp"
-#include "Utility.hpp"
-#include "Category.hpp"
+#include "../Include/DataTables.hpp"
+#include "../Include/Pickup.hpp"
+#include "../Include/Utility.hpp"
+#include "../Include/Category.hpp"
 
 namespace {
     const std::vector<PickupData> Table = initializePickupData();
@@ -29,4 +29,4 @@ void Pickup::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) cons
 }
 
 
-#include "Pickup.hpp"
+#include "../Include/Pickup.hpp"

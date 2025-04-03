@@ -9,7 +9,7 @@
 #include "ResourceHolder.hpp"
 class TextNode : public SceneNode{
 public:
-    explicit TextNode(const FontHolder& fonts, const std::string& text);
+    explicit TextNode(Category::Type category, const FontHolder &fonts, const std::string &text);
     void setString(const std::string& text);
 private:
     void drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const override;
