@@ -1,4 +1,4 @@
-# SFML Game Development Project
+# Wing Commander
 
 ## Overview
 This project is an implementation of a game based on concepts and techniques covered in the book *SFML Game Development*. The project showcases my ability to build a 2D game using the Simple and Fast Multimedia Library (SFML) and has deepened my understanding of C++, applying game development best practices and design patterns.
